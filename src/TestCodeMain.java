@@ -5,7 +5,17 @@ public class TestCodeMain
 {
     public static void main(String[] args)
     {
-        createGUI();
+        JFrame.setDefaultLookAndFeelDecorated(true);
+
+        SwingUtilities.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                createGUI();
+            }
+        });
+
 
     }
 
