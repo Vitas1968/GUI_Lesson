@@ -227,12 +227,19 @@ public class Calculator extends JFrame {
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        Calculator calc = new Calculator();
-        calc.pack();
-        calc.setLocationRelativeTo(null);
-        calc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        calc.setVisible(true);
+
+        SwingUtilities.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                Calculator calc = new Calculator();
+                calc.pack();
+                calc.setLocationRelativeTo(null);
+                calc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                calc.setVisible(true);
+            }
+        });
     }
 
 }
